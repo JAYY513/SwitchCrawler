@@ -33,6 +33,7 @@ class SwitchSpider(scrapy.Spider):
                 # TODO If t is none?
                 temp = temp + t + ","
             titles.append(temp)
+            temp = ""
 
         with open(filename, 'w') as f:
             for i in range(len(dates)):
