@@ -39,5 +39,8 @@ class SwitchSpider(scrapy.Spider):
             for i in range(len(dates)):
                 f.write(dates[i])
                 f.write("\n")
-                f.write(titles[i])
-                f.write("\n")
+
+                tmp_titles = titles[i].split(',')
+                for j in range(len(tmp_titles)):
+                    f.write(tmp_titles[j])
+                    f.write("\n")
